@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import './styles/App.css';
 import Form from './components/Form';
 import BusinessCard from './components/BusinessCard';
-import { PageContext } from './utils';
+import { PageContext, wait } from './utils';
 
 class App extends Component {
   
@@ -47,11 +48,29 @@ class App extends Component {
     this.setState(App.initialState);
   }
 
-  submitFormHandler = () => {
+  submitFormHandler = async () => {
     this.setState({ formSubmitting: true });
-    setTimeout(() => {
-      this.setState({ formSubmitting: false, formSubmitted: true });
-    }, 2000);
+    const {
+      name,
+      job,
+      prefix,
+      phone,
+      email,
+      website,
+      address,
+    } = this.state;
+    const payload = {
+      name,
+      job,
+      prefix,
+      phone,
+      email,
+      website,
+      address
+    };
+    // TODO: apiClient.requestCard(payload)
+    await wait(2000);
+    this.setState({ formSubmitting: false, formSubmitted: true });
   }
 
   render() {

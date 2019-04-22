@@ -19,6 +19,14 @@ const BusinessCard = () => {
     formSubmitted,
   } = useContext(PageContext);
 
+  const scaleStyle = {
+    transform: 'scale(1.3)',
+    opacity: 1
+  };
+  const unsetStyle = {
+    transform: 'unset',
+    opacity: 1,
+  };
   return (
     <article className="businessCard col col6">
       <figure className="businessCard-badge">
@@ -31,13 +39,7 @@ const BusinessCard = () => {
         <div className="businessCard-cardBack" />
         <div
           className="businessCard-cardFront"
-          style={formSubmitted ? {
-            transform: 'scale(1.3)',
-            opacity: 1
-          } : {
-            transform: 'unset',
-            opacity: 1,
-          }}
+          style={formSubmitted ? scaleStyle : unsetStyle}
         >
           <div>
             <p className="businessCard-cardFront-title">{capitalize(name)}</p>
