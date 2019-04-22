@@ -1,0 +1,17 @@
+{
+  "name": "cabify-web-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace website start",
+    "ui": "yarn workspace cabify-ui dev"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/eslint"
+    ]
+  }
+}
