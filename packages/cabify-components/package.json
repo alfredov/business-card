@@ -2,11 +2,12 @@
   "name": "cabify-components",
   "private": true,
   "version": "1.0.0",
-  "main": "./components",
+  "main": "./src",
   "repository": "git@github.com:alfredov/business-card.git",
   "author": "Alfredo V. alfredo.villagomez.m@gmail.com",
   "license": "MIT",
   "scripts": {
+    "release": "webpack",
     "dev": "docz dev",
     "docz:build": "docz build"
   },
@@ -20,7 +21,8 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",

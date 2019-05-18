@@ -5,7 +5,8 @@
   "repository": "git@github.com:alfredov/business-card.git",
   "scripts": {
     "start": "yarn workspace website start",
-    "ui": "yarn workspace cabify-components dev"
+    "ui": "yarn workspace cabify-components dev",
+    "ui:release": "yarn workspace cabify-components release"
   },
   "workspaces": {
     "packages": [
