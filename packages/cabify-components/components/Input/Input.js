@@ -89,7 +89,7 @@ const Input = ({
           pattern={(type === types.tel) ? '\\d*' : null}
           {...extraProps}
         />
-        {error && <ErrorIcon />}
+        {error && <ErrorIcon error={error} />}
         {label && <Label>{label}</Label>}
       </InputWrapper>
     </Field>
