@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
 import {
   MenuButton,
   MenuList,
@@ -37,8 +37,21 @@ export const MenuButtonStyled = styled(MenuButton)`
   ${getBorderBottom}
 `;
 
+const slideDown = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 export const List = styled(MenuList)`
-  width: 240px;
+  animation: ${slideDown} 0.2s ease;
+  width: 100%;
+  min-width: 240px;
   height: 192px;
   display: block;
   background: #FFFFFF;
