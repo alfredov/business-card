@@ -1,0 +1,33 @@
+{
+  "name": "cabify-components",
+  "private": true,
+  "version": "1.0.0",
+  "main": "./components",
+  "repository": "git@github.com:alfredov/business-card.git",
+  "author": "Alfredo V. alfredo.villagomez.m@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "css-loader": "^2.1.1",
+    "docz": "^1.0.4",
+    "docz-theme-default": "^1.0.4",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "style-loader": "^0.23.1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@reach/menu-button": "^0.1.10",
+    "prop-types": "^15.7.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}

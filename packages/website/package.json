@@ -1,9 +1,10 @@
 {
   "name": "website",
   "version": "0.1.0",
+  "repository": "git@github.com:alfredov/business-card.git",
   "private": true,
   "dependencies": {
-    "cabify-ui": "*",
+    "cabify-components": "*",
     "node-sass-chokidar": "^1.3.0",
     "prop-types": "^15.7.2",
     "react": "^16.4.1",
