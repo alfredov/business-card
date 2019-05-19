@@ -1,0 +1,57 @@
+{
+  "name": "cabify-components",
+  "private": true,
+  "version": "1.0.3",
+  "main": "./src",
+  "files": [
+    "src"
+  ],
+  "repository": "git@github.com:alfredov/business-card.git",
+  "author": "Alfredo V. alfredo.villagomez.m@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "release": "webpack --mode=production",
+    "dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "docz": "^1.0.4",
+    "docz-theme-default": "^1.0.4",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "gitpkg": "^1.0.0-beta.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@reach/menu-button": "^0.1.10",
+    "prop-types": "^15.7.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "gitpkg": {
+    "registry": "git@github.com:alfredov/business-card.git"
+  }
+}
