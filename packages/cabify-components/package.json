@@ -1,10 +1,11 @@
 {
   "name": "cabify-components",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "./src",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "repository": "git@github.com:alfredov/business-card.git",
   "author": "Alfredo V. alfredo.villagomez.m@gmail.com",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
@@ -48,7 +50,8 @@
       "@babel/preset-react"
     ],
     "plugins": [
-      "@babel/plugin-proposal-class-properties"
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-syntax-dynamic-import"
     ]
   },
   "gitpkg": {

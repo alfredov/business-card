@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Button, Input, PrefixDropDown } from 'cabify-components';
+import { PrefixDropDown, Button, Input } from 'cabify-components';
 
 import { PageContext } from '../utils';
 

@@ -18,18 +18,18 @@ module.exports = () => ({
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
-        loader: 'url-loader',
-        options: {
-          name: '[hash].[ext]',
-          limit: 10000,
-        },
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
+      // {
+      //   test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+      //   loader: 'url-loader',
+      //   options: {
+      //     name: '[hash].[ext]',
+      //     limit: 10000,
+      //   },
+      // },
+      // {
+      //   test: /\.css$/,
+      //   use: ['style-loader', 'css-loader'],
+      // },
     ],
   },
   resolve: {
