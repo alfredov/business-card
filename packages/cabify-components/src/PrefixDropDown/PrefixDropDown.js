@@ -94,6 +94,12 @@ const prefixes = {
   peru: '51',
   spain: '34',
   uruguay: '598',
+  portugal: '351',
+  ecuador: '593',
+  panama: '507',
+  costarica: '506',
+  dominican: '1',
+  japan: '81',
 };
 
 PrefixDropDown.propTypes = {
@@ -108,6 +114,12 @@ PrefixDropDown.propTypes = {
     prefixes.mexico,
     prefixes.peru,
     prefixes.spain,
+    prefixes.portugal,
+    prefixes.ecuador,
+    prefixes.panama,
+    prefixes.costarica,
+    prefixes.dominican,
+    prefixes.japan,
   ]),
   name: PropTypes.string,
 };

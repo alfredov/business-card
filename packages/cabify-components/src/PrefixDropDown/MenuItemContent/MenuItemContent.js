@@ -40,6 +40,12 @@ MenuItemContent.propTypes = {
     countryCodes.brazil,
     countryCodes.bolivia,
     countryCodes.uruguay,
+    countryCodes.portugal,
+    countryCodes.ecuador,
+    countryCodes.panama,
+    countryCodes.costarica,
+    countryCodes.dominican,
+    countryCodes.japan,
   ]).isRequired,
 };
 

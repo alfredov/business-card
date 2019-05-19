@@ -8,6 +8,12 @@ export const prefixes = {
   peru: '51',
   spain: '34',
   uruguay: '598',
+  portugal: '351',
+  ecuador: '593',
+  panama: '507',
+  costarica: '506',
+  dominican: '1',
+  japan: '81',
 };
 
 export const countryCodes = {
@@ -20,6 +26,12 @@ export const countryCodes = {
   brazil: 'BR',
   bolivia: 'BO',
   uruguay: 'UY',
+  portugal: 'PT',
+  ecuador: 'EC',
+  panama: 'PA',
+  costarica: 'CR',
+  dominican: 'DO',
+  japan: 'JP',
 };
 
 export const countries = [
@@ -32,4 +44,10 @@ export const countries = [
   { name: 'Peru', prefix: prefixes.peru, countryCode: countryCodes.peru },
   { name: 'Spain', prefix: prefixes.spain, countryCode: countryCodes.spain },
   { name: 'Uruguay', prefix: prefixes.uruguay, countryCode: countryCodes.uruguay },
+  { name: 'Portugal', prefix: prefixes.portugal, countryCode: countryCodes.portugal },
+  { name: 'Ecuador', prefix: prefixes.ecuador, countryCode: countryCodes.ecuador },
+  { name: 'Panama', prefix: prefixes.panama, countryCode: countryCodes.panama },
+  { name: 'Costa Rica', prefix: prefixes.costarica, countryCode: countryCodes.costarica },
+  { name: 'Dominican Republic', prefix: prefixes.dominican, countryCode: countryCodes.dominican },
+  { name: 'Japan', prefix: prefixes.japan, countryCode: countryCodes.japan },
 ];
