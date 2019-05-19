@@ -6,8 +6,8 @@ import {
   MenuItem,
 } from '@reach/menu-button';
 import PropTypes from 'prop-types';
-import '@reach/menu-button/styles.css';
 
+import WithGlobalStyles from './WithGlobalStyles';
 import MenuItemContent from './MenuItemContent';
 import { List, BlurBottomBar, MenuButtonStyled } from './styles';
 import MenuButtonContent from './MenuButtonContent';
@@ -41,42 +41,45 @@ class PrefixDropDown extends Component {
   render() {
     const { items, prefix } = this.state;
     return (
-      <Menu>
-        {({ isOpen }) => {
-          let rect = {};
-          if (isOpen) {
-            rect = this.menuButton.getBoundingClientRect();
-          }
-          return (
-            <Fragment>
-              <MenuButtonStyled
-                ref={(node) => { this.menuButton = node; }}
-                withborder={isOpen ? '' : '1'}
-              >
-                <MenuButtonContent
-                  isOpen={isOpen}
-                  prefix={prefix}
-                />
-              </MenuButtonStyled>
-              <List>
-                {items.map(item => (
-                  <MenuItem
-                    onSelect={this.selectItemHandler.bind(this, item)}
-                    key={item.prefix}
-                  >
-                    <MenuItemContent
-                      title={item.name}
-                      codeNumber={item.prefix}
-                      iconFlag={item.countryCode}
-                    />
-                  </MenuItem>
-                ))}
-                <BlurBottomBar buttonRect={rect}>&nbsp;</BlurBottomBar>
-              </List>
-            </Fragment>
-          );
-        }}
-      </Menu>
+      <Fragment>
+        <WithGlobalStyles />
+        <Menu>
+          {({ isOpen }) => {
+            let rect = {};
+            if (isOpen) {
+              rect = this.menuButton.getBoundingClientRect();
+            }
+            return (
+              <Fragment>
+                <MenuButtonStyled
+                  ref={(node) => { this.menuButton = node; }}
+                  withborder={isOpen ? '' : '1'}
+                >
+                  <MenuButtonContent
+                    isOpen={isOpen}
+                    prefix={prefix}
+                  />
+                </MenuButtonStyled>
+                <List>
+                  {items.map(item => (
+                    <MenuItem
+                      onSelect={this.selectItemHandler.bind(this, item)}
+                      key={item.prefix}
+                    >
+                      <MenuItemContent
+                        title={item.name}
+                        codeNumber={item.prefix}
+                        iconFlag={item.countryCode}
+                      />
+                    </MenuItem>
+                  ))}
+                  <BlurBottomBar buttonRect={rect}>&nbsp;</BlurBottomBar>
+                </List>
+              </Fragment>
+            );
+          }}
+        </Menu>
+      </Fragment>
     );
   }
 }
