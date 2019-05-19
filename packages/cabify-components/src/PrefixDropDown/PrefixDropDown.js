@@ -14,7 +14,7 @@ import MenuButtonContent from './MenuButtonContent';
 import { orderItemsByPrefixSelected } from './utils';
 import { countries } from './data';
 
-class CodesDropdown extends Component {
+class PrefixDropDown extends Component {
   constructor(props) {
     super(props);
     const { defaultPrefix } = this.props;
@@ -93,8 +93,8 @@ const prefixes = {
   uruguay: '598',
 };
 
-CodesDropdown.propTypes = {
-  onSelect: PropTypes.func.isRequired,
+PrefixDropDown.propTypes = {
+  onSelect: PropTypes.func,
   defaultPrefix: PropTypes.oneOf([
     prefixes.uruguay,
     prefixes.argentina,
@@ -109,9 +109,10 @@ CodesDropdown.propTypes = {
   name: PropTypes.string,
 };
 
-CodesDropdown.defaultProps = {
+PrefixDropDown.defaultProps = {
+  onSelect: () => {},
   defaultPrefix: null,
   name: null,
 };
 
-export default CodesDropdown;
+export default PrefixDropDown;

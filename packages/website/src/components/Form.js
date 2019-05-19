@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Button, Input, CodesDropdown } from 'cabify-components';
+import { Button, Input, PrefixDropDown } from 'cabify-components';
+
 import { PageContext } from '../utils';
 
 const Form = ({ onSubmit }) => {
@@ -59,7 +60,7 @@ const Form = ({ onSubmit }) => {
       </div>
       <div className="row row-separationMedium row-gutterMedium">
         <div className="col col3">
-          <CodesDropdown
+          <PrefixDropDown
             name="prefix"
             defaultPrefix={prefix}
             onSelect={onChangeInput}
