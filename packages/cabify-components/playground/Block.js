@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-export default ({ children }) => (
-  <div style={{ marginBottom: 24 }}>{children}</div>
+export default ({ children, style }) => (
+  <div style={{ marginBottom: 24, ...style }}>{children}</div>
 );

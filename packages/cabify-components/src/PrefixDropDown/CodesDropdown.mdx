@@ -4,6 +4,7 @@ name: PrefixDropDown
 
 import { Playground, Props } from 'docz';
 import PrefixDropDown from './PrefixDropDown';
+import Block from '../../playground/Block';
 
 # PrefixDropDown
 
@@ -12,9 +13,11 @@ import PrefixDropDown from './PrefixDropDown';
 ## Appearance
 
 <Playground>
-  <PrefixDropDown
-    defaultPrefix="54"
-    name="prefix"
-    onSelect={(prefixCode, name) => console.log(prefixCode, name)}
-  />
+  <Block style={{ width: '240px' }}>
+    <PrefixDropDown
+      defaultPrefix="54"
+      name="prefix"
+      onSelect={(prefixCode, name) => console.log(prefixCode, name)}
+    />
+  </Block>
 </Playground>
