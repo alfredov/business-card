@@ -1,0 +1,20 @@
+---
+name: PrefixDropDown
+---
+
+import { Playground, Props } from 'docz';
+import PrefixDropDown from './PrefixDropDown';
+
+# PrefixDropDown
+
+<Props of={PrefixDropDown} />
+
+## Appearance
+
+<Playground>
+  <PrefixDropDown
+    defaultPrefix="54"
+    name="prefix"
+    onSelect={(prefixCode, name) => console.log(prefixCode, name)}
+  />
+</Playground>
