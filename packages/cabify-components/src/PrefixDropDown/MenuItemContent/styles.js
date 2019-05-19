@@ -17,10 +17,3 @@ export const ContentLeft = styled.div`
 export const ContentLeftText = styled.span`
   margin-left: 16px;
 `;
-
-export const ImageFlag = styled.img`
-  width: 15px;
-  height: 15px;
-  border-radius: 7.5px;
-  object-fit: cover;
-`;

@@ -11,15 +11,15 @@ export const prefixes = {
 };
 
 export const countryCodes = {
-  spain: 'es',
-  chile: 'cl',
-  mexico: 'mx',
-  colombia: 'co',
-  peru: 'pe',
-  argentina: 'ar',
-  brazil: 'br',
-  bolivia: 'bo',
-  uruguay: 'uy',
+  spain: 'ES',
+  chile: 'CL',
+  mexico: 'MX',
+  colombia: 'CO',
+  peru: 'PE',
+  argentina: 'AR',
+  brazil: 'BR',
+  bolivia: 'BO',
+  uruguay: 'UY',
 };
 
 export const countries = [

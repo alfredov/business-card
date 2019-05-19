@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { countryCodes } from '../data';
 
@@ -6,53 +6,17 @@ import {
   Content,
   ContentLeft,
   ContentLeftText,
-  ImageFlag,
 } from './styles';
-
-import mx from './icons/mx.svg';
-import cl from './icons/cl.svg';
-import es from './icons/es.svg';
-import co from './icons/co.svg';
-import pe from './icons/pe.svg';
-import ar from './icons/ar.svg';
-import br from './icons/br.svg';
-import bo from './icons/bo.svg';
-import uy from './icons/uy.svg';
-
-function getFlagIconSource(iconType) {
-  switch (iconType) {
-    case countryCodes.spain:
-      return es;
-    case countryCodes.chile:
-      return cl;
-    case countryCodes.mexico:
-      return mx;
-    case countryCodes.colombia:
-      return co;
-    case countryCodes.peru:
-      return pe;
-    case countryCodes.argentina:
-      return ar;
-    case countryCodes.brazil:
-      return br;
-    case countryCodes.bolivia:
-      return bo;
-    case countryCodes.uruguay:
-      return uy;
-    default:
-      return null;
-  }
-}
+import FlagFallBack from './icons/Fallback';
 
 const MenuItemContent = ({ title, codeNumber, iconFlag }) => {
-  const source = getFlagIconSource(iconFlag);
+  const Flag = React.lazy(() => import(`./icons/${iconFlag}`));
   return (
     <Content>
       <ContentLeft>
-        <ImageFlag
-          src={source}
-          alt={title}
-        />
+        <Suspense fallback={<FlagFallBack />}>
+          <Flag />
+        </Suspense>
         <ContentLeftText>{title}</ContentLeftText>
       </ContentLeft>
       <span>
