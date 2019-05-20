@@ -2,9 +2,12 @@
   "name": "cabify-web-app",
   "version": "0.0.1",
   "private": true,
+  "homepage": "http://alfredov.github.io/business-card",
   "repository": "git@github.com:alfredov/business-card.git",
   "scripts": {
     "start": "yarn workspace website start",
+    "build": "yarn workspace website build",
+    "deploy": "yarn workspace website deploy",
     "ui": "yarn workspace cabify-components dev",
     "ui:release": "yarn workspace cabify-components release"
   },
